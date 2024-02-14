@@ -1,0 +1,14 @@
+df['Prediction'] = np.append(predict_train,predict_test)
+df['Strategy Returns'] = np.where( df['Prediction'].eq("1"),df['Open'].shift(-2)-df['Open'].shift(-1),0)
+
+df['Strategy Returns'] = df['Strategy Returns'].cumsum() 
+
+df.plot(y='Strategy Returns')
+plt.plot()
+
+
+
+
+
+
+
