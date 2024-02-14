@@ -1,0 +1,32 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Existing DataFrame
+df_existing = pd.DataFrame({
+    'Date': ['2010-06-29 00:00:00-04:00', '2010-06-30 00:00:00-04:00', '2010-07-01 00:00:00-04:00',
+             '2010-07-02 00:00:00-04:00', '2010-07-06 00:00:00-04:00'],
+    'Open': [1.266667, 1.719333, 1.666667, 1.533333, 1.333333],
+    'High': [1.666667, 2.028000, 1.728000, 1.540000, 1.333333],
+    'Low': [1.169333, 1.553333, 1.351333, 1.247333, 1.055333],
+    'Close': [1.592667, 1.588667, 1.464000, 1.280000, 1.074000],
+    'Adj Close': [1.592667, 1.588667, 1.464000, 1.280000, 1.074000],
+    'Volume': [281494500, 257806500, 123282000, 77097000, 103003500]
+})
+
+# Define an empty DataFrame `df` for further concatenation
+df = pd.DataFrame()
+
+# Concatenate the existing DataFrame with the new data
+df = pd.concat([df_existing, df], ignore_index=True)
+
+# Convert 'Date' column to datetime format
+df['Date'] = pd.to_datetime(df['Date'])
+
+# Plotting the 'Close' prices over time
+plt.figure(figsize=(10, 6))
+plt.plot(df['Date'], df['Close'], marker='o', color='blue', linestyle='-')
+plt.title('Close Prices over Time')
+plt.xlabel('Date')
+plt.ylabel('Close Price')
+plt.grid(True)
+plt.show()
