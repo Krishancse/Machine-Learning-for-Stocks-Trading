@@ -1,0 +1,7 @@
+prediction = df.iloc[-1]['Prediction'] 
+
+if prediction=="1":
+  print("Today's return forecast: UP")
+else: 
+  print("Today's return forecast: DOWN")
+output : Today's return forecast: UP
