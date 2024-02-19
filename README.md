@@ -4,7 +4,7 @@
 
 - Quantitative Trading and research [Machine learning for stock trading](https://github.com/Krishancse/Machine-Learning-for-Stocks-Trading)
 
-- 🌱 I’m currently learning **Python with all libraries , ai and ml , data Visualisation and quantative trading**
+- 🌱 I’m currently learning **Python with all libraries , ai and ml , data Visualisation and quantative trading and research**
 
 - 👨‍💻 All of my projects are available at [Github:Krishancse](Github:Krishancse)
 
